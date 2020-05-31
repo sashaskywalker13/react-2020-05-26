@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Star } from './star';
+import Star from './star';
 
 const Rate = ({ value }) => (
   <div>

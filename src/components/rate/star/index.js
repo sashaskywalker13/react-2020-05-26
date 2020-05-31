@@ -1,1 +1,1 @@
-export * from './star';
+export { default } from './star';
