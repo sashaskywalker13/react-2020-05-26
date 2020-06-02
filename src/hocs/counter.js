@@ -8,11 +8,11 @@ export default (WrappedComponent) => (props) => {
 
 // export default (WrappedComponent) => {
 //   const HocComponent = (props) => {
-//     const { count, decrement, increment } = useAmount(5);
+//     const { amount, decrement, increment } = useAmount(5);
 //     return (
 //       <WrappedComponent
 //         {...props}
-//         count={count}
+//         amount={amount.toString()}
 //         decrement={decrement}
 //         increment={increment}
 //       />
