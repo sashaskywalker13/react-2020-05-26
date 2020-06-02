@@ -3,7 +3,7 @@ import React from 'react';
 import Rate from '../../rate';
 import styles from './review.module.css';
 
-const Review = ({ review: { user, text, rating } }) => (
+const Review = ({ user, text, rating }) => (
   <div className={styles.review}>
     <div className={styles.content}>
       <div>
@@ -16,5 +16,9 @@ const Review = ({ review: { user, text, rating } }) => (
     </div>
   </div>
 );
+
+Review.defaultProps = {
+  user: 'Anonymous',
+};
 
 export default Review;
