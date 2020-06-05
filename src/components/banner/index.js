@@ -21,7 +21,7 @@ Banner.defaultProps = {
 };
 
 Banner.propTypes = {
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.element.isRequired,

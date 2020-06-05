@@ -31,7 +31,7 @@ const Restaurant = ({ restaurant }) => {
 Restaurant.propTypes = {
   restaurant: PropTypes.shape({
     name: PropTypes.string,
-    menu: PropTypes.array,
+    menu: PropTypes.array.isRequired,
     reviews: PropTypes.array.isRequired,
   }),
 };
