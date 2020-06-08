@@ -1,0 +1,13 @@
+.tabs {
+  height: auto;
+  text-align: center;
+  padding: 12px;
+}
+
+.tabs span {
+  cursor: pointer;
+}
+
+.tab {
+  padding: 12px;
+}
