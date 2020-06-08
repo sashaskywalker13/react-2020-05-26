@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 import styles from './tabs.module.css';
 
@@ -14,7 +15,7 @@ const Tabs = ({ tabs }) => {
         {tabs.map(({ title }, index) => (
           <span
             key={title}
-            className={styles.tab}
+            className={cn(styles.tab, { [styles.active]: index === activeTab })}
             onClick={() => setActiveTab(index)}
           >
             {title}
