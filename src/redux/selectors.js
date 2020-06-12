@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import { getAverage, getById, mapToArray } from './utils';
 
-const restaurantsSelector = (state) => state.restaurants;
+const restaurantsSelector = (state) => state.restaurants.toJS();
 const orderSelector = (state) => state.order;
 const productsSelector = (state) => state.products;
 const reviewsSelector = (state) => state.reviews;
