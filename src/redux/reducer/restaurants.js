@@ -1,16 +1,22 @@
-import { fromJS } from 'immutable';
+// import { fromJS } from 'immutable';
+import produce from 'immer';
 import { ADD_REVIEW } from '../constants';
 import { normalizedRestaurants } from '../../fixtures';
 import { arrToMap } from '../utils';
 
-export default (state = fromJS(arrToMap(normalizedRestaurants)), action) => {
+export default (state = arrToMap(normalizedRestaurants), action) => {
   const { type, payload, reviewId } = action;
 
   switch (type) {
     case ADD_REVIEW:
-      return state.updateIn([payload.restaurantId, 'reviews'], (reviews) =>
-        reviews.push(reviewId)
-      );
+      return produce(state, (draft) => {
+        draft[payload.restaurantId].reviews.push(reviewId);
+      });
+
+    // case ADD_REVIEW:
+    //   return state.updateIn([payload.restaurantId, 'reviews'], (reviews) =>
+    //     reviews.push(reviewId)
+    //   );
 
     // case ADD_REVIEW:
     //   const restaurant = state[payload.restaurantId];
