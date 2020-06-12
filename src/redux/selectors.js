@@ -25,6 +25,9 @@ export const allRestaurantsSelector = createSelector(
   (restaurants) => Object.values(restaurants)
 );
 
+export const restaurantReviews = (state, ownProps) =>
+  ownProps.restaurant.reviews.map((id) => state.reviews[id]);
+
 export const totalSelector = createSelector(
   orderProductsSelector,
   (orderProducts) =>

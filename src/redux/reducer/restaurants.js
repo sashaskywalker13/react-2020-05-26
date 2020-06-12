@@ -15,7 +15,7 @@ export default (restaurants = defaultRestaurants, action) => {
         ...restaurants,
         [values.restaurant]: {
           ...restaurants[values.restaurant],
-          reviews: [...restaurants[values.restaurant].reviews.concat(id)],
+          reviews: restaurants[values.restaurant].reviews.concat(id),
         },
       };
     default:

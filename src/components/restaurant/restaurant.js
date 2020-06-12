@@ -7,6 +7,7 @@ import Reviews from '../reviews';
 import Banner from '../banner';
 import Rate from '../rate';
 import Tabs from '../tabs';
+import { restaurantReviews } from '../../redux/selectors';
 // import { restaurants } from '../../fixtures';
 
 const Restaurant = ({ restaurant, reviews }) => {
@@ -44,5 +45,5 @@ Restaurant.propTypes = {
 };
 
 export default connect((state, ownProps) => ({
-  reviews: ownProps.restaurant.reviews.map((id) => state.reviews[id]),
+  reviews: restaurantReviews(state, ownProps),
 }))(Restaurant);
