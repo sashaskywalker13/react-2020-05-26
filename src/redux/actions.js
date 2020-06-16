@@ -56,7 +56,7 @@ export const loadReviews = (restaurantId) => async (dispatch, getState) => {
   }
 };
 
-export const loadUsers = (restaurantId) => async (dispatch, getState) => {
+export const loadUsers = () => (dispatch, getState) => {
   const state = getState();
   const loading = usersLoadingSelector(state);
   const loaded = usersLoadedSelector(state);
